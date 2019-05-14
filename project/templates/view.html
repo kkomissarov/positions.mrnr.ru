@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+	
+
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h1>Позиции проекта {{project_name}}</h1>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="export-block">
+
+			<p>Выберете даты выгрузки:</p>
+				<form action="" class="" method="post">
+						<input id="start_date" placeholder="Начало" name="s_date" value="{{default_start_date}}" autocomplete="off" readonly class="date-selector"> 
+						<input id="finish_date" placeholder="Конец" name="f_date" value="{{default_finish_date}}" autocomplete="off" readonly class="date-selector">
+						<button class="red create-project-button">Выгрузить</button>
+						<br>
+						{%if export_file%}
+						<div class="download-file">
+							<img src="/static/images/icons/csv.png">
+							<a href="/static/export/{{export_file}}">{{export_file}}</a>
+						</div>
+						{%endif%}
+
+
+
+						{%if error%}
+						<div class="download-error">
+							{{error}}
+						</div>
+						{%endif%}
+
+						
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<script type="text/javascript">
+			  
+              google.charts.load("current", {packages:["corechart"]});
+              google.charts.setOnLoadCallback(drawChart);
+
+              function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+     				{{top_chart_data | safe}}
+                ]);
+
+                var options = {
+                  legend: 'none',
+                  title: '% в ТОП-10 за последние 30 дней',
+                  colors: ['#2B8233'],
+                  lineWidth: 2,
+                  chartArea: {'width': '90%', 'height': '70%'},
+                  hAxis : { 
+        				textStyle : {
+            				fontSize: 9 
+       				 	}
+   				 	}
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('top10'));
+                chart.draw(data, options);
+              }
+          </script>
+
+          <div id="top10" style="width:100%; height: 500px;"></div>
+
+
+		</div>
+	</div>
+
+
+
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<script type="text/javascript">
+			  
+              google.charts.load("current", {packages:["corechart"]});
+              google.charts.setOnLoadCallback(drawChart);
+
+              function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+     				{{average_chart_data | safe}}
+                ]);
+
+                var options = {
+                  	legend: 'none',
+                 	title: 'Средняя позиция за последние 30 дней',
+                 	colors: ['#B43E3C'],
+                 	lineWidth: 2,
+                 	chartArea: {
+                 		'width': '90%', 'height': '70%'
+                 	},
+                	
+                	vAxis: { 
+                		direction: -1
+                	},
+
+               	 	hAxis : { 
+        				textStyle : {
+            				fontSize: 9 
+       				 	}
+   				 	}
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('average_position'));
+                chart.draw(data, options);
+              }
+          </script>
+
+          <div id="average_position" style="width:100%; height: 500px;"></div>
+
+
+		</div>
+	</div>	
+
+
+{% endblock %}
+
+
+
+		

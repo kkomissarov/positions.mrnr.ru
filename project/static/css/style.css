@@ -1,0 +1,471 @@
+html, body, div, p, li, h1, h2, h3, h4, h5, h6, button {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	color:rgb(102, 102, 102);
+}
+
+a {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	color:#A13644;
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+}
+
+a:hover {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	color:#A13644;
+	text-decoration-line: none;
+}
+
+html {
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 1.65em;
+
+}
+
+p {
+	line-height: 1.65;
+
+}
+
+button {
+	background-color: transparent;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.5);
+    color: #555 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 400;
+    height: 2.75em;
+    letter-spacing: 0.125em;
+    line-height: 2.75em;
+    padding: 0 2em;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0.125em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.header-wrapper {
+	background:#000;
+}
+
+.header-wrapper a {
+	color: #fff;
+}
+
+.footer-wrapper {
+
+	padding: 2em 0;
+	background-color: #000;
+	color:#fff;
+}
+
+
+.footer-wrapper p {
+	font-size: 0.8em;
+	margin: 0;
+	color:#fff;
+}
+
+.logo-wrapper{
+	margin:20px 0;
+}
+
+.logo {
+	width:200px;
+}
+
+.logo-description {
+	font-size:12px;
+	text-transform: uppercase;
+	color:#fff;
+}
+
+.main-wrapper {
+	padding: 30px 0;
+	min-height: 80vh;
+	background:#e9ecef;
+}
+
+.proj-wrapper {
+	border-top: 2px dotted #e1e1e1;
+	border-bottom: 2px dotted #e1e1e1;
+	margin-top:20px;
+	margin-bottom:20px;}
+
+.proj-info {
+	padding: 10px 10px;
+	margin: 0px;
+}
+
+.proj-info li {
+	display: inline-block;
+}
+
+.proj-name {
+	font-size:1.2rem;
+	width:100%;
+}
+
+.proj-domain {
+	font-size:1em
+	color:#999;
+	width:200px;
+}
+
+.proj-queries {
+	font-size:1em;
+	color:#999;
+	width:200px;
+}
+
+
+
+.proj-view a, .proj-edit a {
+	background-color: transparent;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.5);
+    color: #555 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 400;
+    height: 2.75em;
+    letter-spacing: 0.125em;
+    line-height: 2.75em;
+    padding: 0 2em;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0.125em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.proj-view a:hover, .proj-edit a:hover {
+	background-color: rgba(144, 144, 144, 0.075); 
+
+}
+
+
+.add-project-wrap {
+	padding-top:10px;
+}
+
+.add_project_form input {
+	display: block;
+	width:100%;
+    padding: 0.2em 1em;
+    height: 2.75em;
+    font-size: 1em;
+	margin-top:2em;
+	border-radius: 4px;
+	border: 1px solid #9d9d9d;
+}
+
+.add_project_form input:disabled {
+	
+    color: #b6b6b6;
+    background-color: #f8f8f8;
+}
+
+
+.add_project_form input:first-child{
+	margin-top:0px;
+}
+
+.add_project_form input::placeholder{
+	color: #9d9d9d;;
+} 
+
+.add_project_form textarea::placeholder{
+	color: #9d9d9d;;
+}
+
+.add_project_form textarea{
+	resize: none;
+	height:300px;
+	display: block;
+	width:100%;
+    padding: 0.2em 1em;
+    font-size: 1em;
+	margin:2em 0 0 0;
+	border-radius: 4px;
+	border: 1px solid #9d9d9d;;
+}
+
+
+.success_message {
+	display: inline-block;
+    padding: 0px 50px;
+    border: 1px solid #A13644;
+    border-radius: 4px;
+    color: #9d9d9d;
+}
+
+button.red {
+	color: #fff!important;
+	background-color: #A13644;
+}
+
+button.red:hover {
+	background-color: #cc3549;
+}
+
+.input_error_message {
+	color: #A13644;
+	margin: 2px 0px 0px 0px;
+	font-weight:400;
+	font-size:0.8em;
+}
+
+.del-link-wpapper {
+	display: block;
+	width: 100%;
+	text-align: right;
+	padding: 10px 0;
+}
+
+.modal-window-background {
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	top:0;
+	left:0;
+	background: rgba(0, 0, 0, 0.8);
+	display: none;
+}
+
+.modal-window-main {
+	position:fixed;
+	width:400px;
+	background-color: #fff;
+	border-radius:4px;
+	top:50%;
+	left: 50%;
+	margin-top:-150px;
+	margin-left: -200px;
+	z-index:4;
+	padding: 2em;
+	display: none;
+}
+
+.del-ok {
+	border-radius: 4px;
+    border: 0;
+    margin-right: 1em;
+    box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.5);
+    color: #555 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 400;
+    height: 2.75em;
+    letter-spacing: 0.125em;
+    line-height: 2.75em;
+    padding: 0 2em;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0.125em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #fff!important;
+	background-color: #A13644;
+    transition: background-color 0.2s ease-in-out;
+
+}
+
+.del-ok:hover {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	color:#A13644;
+	text-decoration-line: none;
+	background-color: #cc3549;
+
+}
+
+.del-nope {
+	border-radius: 4px;
+    border: 0;
+    box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.5);
+    color: #555 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 400;
+    height: 2.75em;
+    letter-spacing: 0.125em;
+    line-height: 2.75em;
+    padding: 0 2em;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0.125em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.2s ease-in-out;}
+
+  .del-nope:hover {
+	font-weight: 400;
+	background-color: rgba(144, 144, 144, 0.075);
+  }
+
+  .create-project-button {
+  	margin-top:1em;
+  }
+
+
+.ui-datepicker {
+  position: absolute;
+    top: 272.7px;
+    left: 33.8px;
+    z-index: 1;
+    display: block;
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+ .ui-datepicker-calendar tr td,  .ui-datepicker-calendar tr td a {
+	font-weight: bold;
+ }
+
+
+.ui-datepicker-calendar tr td a {
+	color: #A13644;
+}
+
+ .ui-datepicker-calendar tr td a:hover  {
+ 	background: #e8e8e8;
+ }
+
+ 
+
+
+.ui-datepicker-unselectable {
+	color: #d2d2d2;
+}
+
+
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    width: 45%;
+    color: #666666;
+    padding: 3px;
+    margin: 0 2px;
+    font-size: 0.8em!important;
+    border: 1px dotted #666;
+    border-radius: 4px;
+}
+
+
+.date-selector {
+	display: inline-block;
+    width: 200px;
+    padding: 0.2em 1em;
+    height: 2.75em;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid #9d9d9d;
+	margin-right: 1em;
+}
+
+.download-file {
+	padding-top:10px;
+}
+
+.download-file img{
+	height:20px;
+}
+
+.download-error {
+	color:#A13644;
+}
+
+.auth-button {
+	margin-top:20px;
+}
+
+.auth-form {
+	width: 300px;
+	margin: 0  auto;
+}
+
+.auth-form input {
+	display: block;
+	width:300px;
+    padding: 0.2em 1em;
+    height: 2.75em;
+    font-size: 1em;
+	margin-top:0.5em;
+	border-radius: 4px;
+	border: 1px solid #9d9d9d;
+}
+
+
+.auth-wrapper{
+	margin-top:30vh;
+}
+
+.auth-block{
+	margin: 0 auto;
+    padding: 40px 50px;
+    background: #e9ecef;
+    border-radius: 10px;
+}
+
+.auth-wrapper h1 {
+	text-align: center;
+}
+
+.auth-info {
+	margin:20px 0;
+
+}
+
+.username{
+	font-size: 14px;
+    font-weight: bold;
+    margin: 0px;
+    color:#fff;
+}
+
+.logout-link {
+	margin: 5px 0 0 0;
+	font-size: 12px;
+}
+
+.auth-error-message {
+	width:430px;
+	margin:10px auto;
+	color:#A13644;
+	text-align: center;
+}
+
+.logtable tr:nth-child(even) {
+	background: #e8e8e8;
+}
+
+.export-block{
+	padding:20px 30px;
+	background: #fff;
+	margin-bottom:20px;
+
+}
+
+#top10, #average_position {
+	margin-bottom: 20px;
+}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+	
+
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h1>Редактировать проект {{project_name}}</h1>
+
+			<div class="del-link-wpapper">
+				<a href="#" id="delete_project"><i class="far fa-trash-alt"></i> Удалить проект</a>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<form action="" class="add_project_form" method="post">
+				
+				<input type="text" name="name" class="new_project_name"  placeholder="Название проекта *" value='{{project_name}}' autocomplete="off">
+				{% if name_error%}
+					<p class="input_error_message">{{name_error}}</p>
+				{% endif %}
+				
+				<input type="text" name="domain" class="new_project_domain" placeholder="site.ru *"  value='{{project_domain}}' autocomplete="off" disabled>
+
+
+				<textarea type="text" name="queries" class="new_project_queries" placeholder="Запросы для отслеживания (каждый запрос с новой строки) *">{{project_queries}}</textarea>
+				{% if queries_error%}
+					<p class="input_error_message">{{queries_error}}</p>
+				{% endif %}
+				<button class="red create-project-button">Сохранить</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- модальное окно -->
+	<div class="modal-window-background"></div>
+	
+	<div class="modal-window-main">
+		<h2>Это точно?</h2>
+		<p>Проект будет удален вместе со всей историей запросов. Восстановить данные будет невозможно. </p>
+		<a class="del-ok" href="/del_project?id={{project_id}}">Удалить</a>
+		<a class="del-nope" href="/">Отмена</a>
+		
+	</div>
+
+{% endblock %}
+		
